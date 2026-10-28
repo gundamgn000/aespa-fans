@@ -1,0 +1,169 @@
+/* D edition overrides; shared content structure remains in home.css. */
+.theme-dimension {
+  --paper: #0c0c18;
+  --ink: #f0f0f9;
+  --muted: #b0aec7;
+  --line: #333144;
+  --ice: #acedef;
+  background: var(--paper);
+  color: var(--ink);
+}
+.theme-dimension .navbar { background: #0b0b17; border-color: #ffffff16; }
+.theme-dimension .brand { color: #e8e5ff; }
+.theme-dimension .navbar nav a:hover { color: var(--ice); }
+.theme-dimension .edition-switch a[aria-current] { background: #c4b8ff; color: #181329; }
+.theme-dimension :is(a, button):focus-visible { outline-color: var(--ice); }
+.dimension-hero {
+  min-height: 790px; height: min(920px, calc(100svh - 80px));
+  position: relative; isolation: isolate; overflow: hidden;
+  background: radial-gradient(ellipse at 78% 38%, #3b2456 0, #19142b 31%, #0c0c18 65%);
+}
+.dimension-meta { display: flex; justify-content: space-between; position: relative; z-index: 2; padding: 30px 5%; color: #bbb6d1; }
+.dimension-meta .edition { color: #c4b8e0; }
+.dimension-scenery { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.dimension-mist { position: absolute; width: 65%; height: 50%; right: -4%; bottom: 4%; background: radial-gradient(ellipse, #7b54c260, #7560a820 40%, transparent 68%); filter: blur(32px); }
+.dimension-moon {
+  position: absolute; width: 38vw; height: 38vw; max-width: 570px; max-height: 570px; right: -12%; top: -10%; border-radius: 50%;
+  box-shadow: inset 3px -2px 3px #cebbff30, inset 12px 0 70px #9c6de726;
+  background: radial-gradient(circle at 0 80%, #4c3260, #241b36 40%, #151123 75%);
+}
+.dimension-floor {
+  position: absolute; height: 52%; width: 170%; left: -35%; bottom: -26%;
+  background-image: linear-gradient(#b7a5e521 1px, transparent 1px), linear-gradient(90deg, #b7a5e521 1px, transparent 1px); background-size: 100px 100px;
+  transform: perspective(420px) rotateX(63deg); transform-origin: top;
+  mask-image: linear-gradient(transparent, #000 25%, #000 65%, transparent);
+}
+.dimension-portal { position: absolute; width: 380px; height: 510px; right: 13%; top: 16%; transform: perspective(1000px) rotateY(-21deg) rotateZ(9deg); }
+.portal-frame { position: absolute; border-radius: 48% 48% 4px 4px; }
+.frame-back { inset: -28px -30px 22px 25px; border: 1px solid #a497ce66; background: linear-gradient(155deg, #74579f24, #14112400 65%); box-shadow: 12px -4px 0 #967cc110, 24px -8px 0 #967cc10b; }
+.frame-middle { inset: -10px -10px 6px 10px; border: 2px solid #c0ace58c; box-shadow: 0 0 20px #a280ea24, inset 0 0 20px #9a75cc33; }
+.frame-front {
+  inset: 0; border: 5px solid #dfc9ff; border-bottom-color: #affaff;
+  background: radial-gradient(ellipse at 55% 78%, #a4e9e824 0, #b19bda18 30%, #0a091b 70%);
+  box-shadow: 0 0 8px #e0ceff, 0 0 36px #b179f08c, inset 0 0 8px #e8c2ff, inset 0 0 55px #b985ed55, 15px 13px 80px #9974d72b;
+}
+.frame-front::before { content: ''; position: absolute; inset: 23px; border-radius: inherit; border: 1px solid #d6bffc38; box-shadow: inset 0 0 50px #986ed72b; }
+.frame-front::after { content: ''; position: absolute; left: -10%; right: -10%; bottom: -9px; height: 11px; background: #b6f7f5; filter: blur(9px); box-shadow: 0 17px 45px #a2eaff; }
+.portal-mark { position: absolute; inset: 0; display: grid; place-items: center; font-family: Georgia, serif; font-style: italic; font-size: 220px; color: #e6e7ff; text-shadow: 0 0 35px #cfa2ff, 4px 3px #655c90; opacity: .8; transform: translateY(10px); }
+.portal-reflection { position: absolute; right: 9%; top: 78%; width: 40%; height: 23%; background: linear-gradient(90deg, transparent 5%, #b7a1df14 20%, #b9f0f333 46%, #b7a1df18 80%, transparent); transform: skewX(-32deg); filter: blur(15px); mask-image: linear-gradient(#000, transparent); }
+.dimension-star { position: absolute; color: #d8dbff; }
+.star-a { right: 9%; top: 24%; font-size: 32px; text-shadow: 0 0 25px #b0d6ff; }
+.star-b { right: 48%; top: 18%; font-size: 20px; color: #a893d2; }
+.dimension-copy { position: relative; padding: 60px 5% 150px; max-width: 1050px; }
+.dimension-kicker { font-size: 9px; letter-spacing: 2.3px; color: #c0b9d6; margin-bottom: 23px; }
+.dimension-kicker span { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #bbfcf5; margin-right: 9px; box-shadow: 0 0 10px #b7fcf5; }
+.dimension-copy h1 { font-size: clamp(64px, 8.8vw, 150px); font-weight: 800; letter-spacing: -.075em; line-height: .95; position: relative; width: max-content; }
+.dimension-copy h1 span { color: transparent; -webkit-text-stroke: 1px #ddd3ff; }
+.dimension-copy h1 i { color: #bceeea; font-style: normal; }
+.dimension-copy h2 { font-size: 28px; font-weight: 400; letter-spacing: 5px; line-height: 1.65; margin-top: 35px; }
+.dimension-intro { font-size: 12px; line-height: 1.9; color: #b6b2ca; margin-top: 18px; }
+.dimension-enter { background: #c1b5ee; color: #171225; margin-top: 28px; min-width: 205px; border-radius: 2px; transition: background .2s, transform .2s; }
+.dimension-enter:hover { background: #c9f2f0; transform: translateY(-2px); }
+.dimension-bottom { position: absolute; bottom: 35px; left: 5%; right: 5%; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; border-top: 1px solid #c5b2f12b; padding-top: 22px; }
+.dimension-coordinate { font-size: 8px; letter-spacing: 1.8px; color: #bcb3cc; line-height: 1.9; }
+.dimension-coordinate b { font-weight: 400; color: #a49bb7; font-size: 7px; }
+.dimension-scroll { font-size: 8px; letter-spacing: 2px; color: #ddd5f0; }
+.dimension-scroll span { margin-left: 20px; font-size: 20px; }
+.dimension-count { font-size: 38px; letter-spacing: -2px; display: flex; align-items: center; gap: 12px; color: #c6b9eb; }
+.dimension-count small { font-size: 7px; letter-spacing: 1.5px; line-height: 1.8; }
+
+/* Shared section treatments. */
+.theme-dimension .ticker { background: #bfb4de; color: #181323; border: 0; font-size: 9px; }
+.theme-dimension .section-title h2 { font-weight: 700; }
+.theme-dimension .section-title h2 span { color: #bbb7d1; }
+.theme-dimension .cross { color: #bbace8; }
+.theme-dimension .members { background: radial-gradient(ellipse at 50% 90%, #252037, transparent 68%); }
+.theme-dimension .member-grid { gap: 24px; }
+.theme-dimension .member-art { height: 350px; border-radius: 140px 140px 2px 2px; background: radial-gradient(ellipse at 50% 75%, #7972a3, #33274a 42%, #1b182c 78%); }
+.theme-dimension .rose .member-art { background: radial-gradient(ellipse at 50% 75%, #a582ab, #50324b 42%, #231a2b 78%); }
+.theme-dimension .blue .member-art { background: radial-gradient(ellipse at 50% 75%, #83b1bd, #2e455f 42%, #171d2c 78%); }
+.theme-dimension .gold .member-art { background: radial-gradient(ellipse at 50% 75%, #ada1cc, #54426e 42%, #231c33 78%); }
+.theme-dimension .member-art::after { inset: 8px; border-radius: inherit; border-color: #d3c2ef26; }
+.theme-dimension .member-no { top: 45px; left: 0; width: 100%; text-align: center; color: #d6c6ef; }
+.theme-dimension .member-symbol { color: #e2dbf6; text-shadow: 2px 4px #75648d, -3px -2px #b4a7d2, 0 0 45px #c5a2ff75; }
+.theme-dimension .member-name h3 { font-size: 22px; letter-spacing: -.5px; }
+.theme-dimension .member-name>span { color: #b9add7; }
+.theme-dimension .member-card>p { color: #aea6c1; }
+.theme-dimension .section-footnote { border-color: #5c5066; }
+.theme-dimension .music { background: #171425; }
+.theme-dimension .album-cover { border-radius: 3px; }
+.theme-dimension .album-info .eyebrow { color: #bdb2d5; }
+.theme-dimension .album-info>span { color: #bbb4ca; }
+.theme-dimension .album-info small { color: #b1a9bf; }
+.theme-dimension .music-note { border-color: #40364e; color: #beb2d0; }
+.theme-dimension .schedule { background: radial-gradient(ellipse at 85% 40%, #1c1c32, transparent 65%); }
+.theme-dimension .status-dot { background: #c4eae9; }
+.theme-dimension .demo-tag { color: #afa8c2; }
+.theme-dimension .filters button { border-color: #51465f; color: #cdc4dc; }
+.theme-dimension .filters button[aria-pressed=true] { background: #cab9ed; color: #21172d; border-color: #cab9ed; }
+.theme-dimension .event-kind { color: #beb0d6; }
+.theme-dimension .date strong { color: #c5c4ed; }
+.theme-dimension .event h3 small { color: #b0a7c4; }
+.theme-dimension .event:hover { background: #241e32; }
+.theme-dimension .event-arrow { color: var(--ice); }
+.theme-dimension .journal { background: radial-gradient(ellipse at 20% 50%, #201930, transparent 70%); }
+.theme-dimension .journal-art { background: radial-gradient(ellipse at 50% 100%, #79739c, #332647 65%); }
+.theme-dimension .journal-art>span { color: #cabbe1; text-shadow: 0 0 70px #a186d6; }
+.theme-dimension .journal-art-1 { background: radial-gradient(ellipse at 30% 0, #4c607b, #1e1c32 70%); }
+.theme-dimension .journal-art-1>span { color: #b0c5d3; }
+.theme-dimension .journal-art small { color: #d3c7e1; }
+.theme-dimension .journal-card .eyebrow, .theme-dimension .journal-card p { color: #b4abc6; }
+.theme-dimension footer { background: radial-gradient(ellipse at 100% 100%, #28203a, #10101c 70%); }
+.theme-dimension .footer-top h2 { color: #dbd0f4; }
+.theme-dimension .footer-bottom p, .theme-dimension .footer-bottom>span { color: #b6abc8; }
+.theme-dimension dialog { background: #1b1729; color: #eee9fa; border: 1px solid #5b4b70; }
+.theme-dimension dialog p { color: #c7bfd7; }
+.theme-dimension .button-dark { background: #c9b9ea; color: #23182e; }
+
+@media (min-width: 1650px) {
+  .dimension-portal { width: 440px; height: 590px; right: 17%; top: 12%; }
+  .dimension-copy { padding-top: 80px; }
+}
+@media (max-width: 1100px) {
+  .dimension-portal { width: 310px; height: 450px; right: 9%; top: 19%; }
+  .dimension-copy { padding-top: 75px; }
+  .theme-dimension .member-grid { gap: 14px; }
+  .theme-dimension .member-art { height: 300px; }
+  .theme-dimension .member-name h3 { font-size: 19px; }
+}
+@media (max-width: 700px) {
+  .theme-dimension .navbar nav { background: #11101f; border-color: #4d3f66; }
+  .dimension-hero { height: auto; min-height: 1010px; }
+  .dimension-meta { padding: 25px 5%; gap: 12px; }
+  .dimension-meta .eyebrow, .dimension-meta .edition { font-size: 7px; letter-spacing: 1px; }
+  .dimension-copy { padding: 32px 5% 135px; }
+  .dimension-kicker { font-size: 7px; letter-spacing: 1.5px; margin-bottom: 20px; }
+  .dimension-copy h1 { font-size: 12.3vw; letter-spacing: -.065em; line-height: .98; }
+  .dimension-copy h1 span { -webkit-text-stroke-width: .8px; }
+  .dimension-copy h2 { margin-top: 400px; font-size: 26px; letter-spacing: 3px; }
+  .dimension-intro { font-size: 11px; line-height: 1.9; margin-top: 14px; }
+  .dimension-enter { margin-top: 24px; padding: 15px 22px; }
+  .dimension-portal { width: 205px; height: 300px; top: 300px; right: calc(50% - 110px); transform: perspective(700px) rotateY(-18deg) rotateZ(8deg); }
+  .frame-front { border-width: 3px; }
+  .frame-back { inset: -18px -19px 15px 18px; }
+  .frame-middle { inset: -6px -6px 4px 6px; border-width: 1px; }
+  .portal-mark { font-size: 155px; }
+  .dimension-moon { width: 240px; height: 240px; right: -120px; top: 200px; }
+  .dimension-mist { top: 300px; bottom: auto; width: 100%; height: 400px; right: 0; }
+  .dimension-floor { top: 570px; bottom: auto; height: 280px; width: 210%; left: -55%; background-size: 65px 65px; }
+  .portal-reflection { top: 610px; width: 60%; right: 15%; height: 100px; }
+  .star-a { top: 295px; right: 12%; font-size: 20px; }
+  .star-b { top: 435px; right: 84%; font-size: 14px; }
+  .dimension-bottom { bottom: 25px; padding-top: 20px; }
+  .dimension-coordinate { font-size: 6px; letter-spacing: 1px; }
+  .dimension-coordinate b { font-size: 6px; }
+  .dimension-scroll { display: none; }
+  .dimension-count { font-size: 30px; gap: 9px; }
+  .dimension-count small { font-size: 6px; letter-spacing: 1px; }
+  .theme-dimension .member-grid { gap: 28px 14px; }
+  .theme-dimension .member-art { height: 245px; }
+  .theme-dimension .member-no { top: 28px; font-size: 9px; }
+  .theme-dimension .member-name h3 { font-size: 20px; }
+  .theme-dimension .placeholder-note { font-size: 6px; letter-spacing: 1px; }
+}
+@media (max-width: 370px) {
+  .dimension-copy h2 { font-size: 24px; }
+  .dimension-meta .eyebrow, .dimension-meta .edition { font-size: 6px; }
+  .theme-dimension .member-art { height: 210px; }
+  .theme-dimension .member-name h3 { font-size: 17px; }
+}

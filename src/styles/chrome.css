@@ -1,0 +1,57 @@
+.theme-chrome {
+  --paper:#eeede8;
+  --ink:#171819;
+  --muted:#747472;
+  --line:#c7c6c0;
+  background:var(--paper);
+  color:var(--ink)
+}
+.chrome-art {
+  position:absolute;
+  width:49vw;
+  height:42vw;
+  right:9%;
+  top:20%;
+  perspective:800px;
+  filter:drop-shadow(0 26px 28px #0009);
+  transform:rotate(-18deg);
+  pointer-events:none
+}
+.orbit {
+  position:absolute;
+  inset:12% 1%;
+  border-radius:50%;
+  border:clamp(18px,3.6vw,65px) solid transparent;
+  background:linear-gradient(150deg,#f9faff 1%,#565a62 9%,#fff 17%,#1a1b20 29%,#838993 38%,#eceef4 49%,#292b32 56%,#d0d6df 65%,#4d515a 77%,#fff 88%,#24262b 96%) border-box;
+  mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);
+  mask-composite:exclude;
+  box-shadow:inset 4px 3px 8px #fff8,6px 8px 16px #0007
+}
+.orbit-one {
+  transform:rotate(-23deg) rotateX(51deg)
+}
+.orbit-two {
+  transform:rotate(65deg) rotateX(53deg)
+}
+.orbit-three {
+  transform:rotate(143deg) rotateX(57deg)
+}
+.orb {
+  position:absolute;
+  width:24%;
+  height:29%;
+  left:38%;
+  top:36%;
+  border-radius:50%;
+  background:radial-gradient(ellipse at 30% 22%,#fff 0,#dce0e5 12%,#777d87 24%,#20232a 46%,#b2b8c4 65%,#e1e2ea 70%,#282a32 86%);
+  box-shadow:inset -8px -9px 15px #0008
+}
+.art-spark {
+  position:absolute;
+  top:15%;
+  right:20%;
+  font-size:70px;
+  color:#fff;
+  filter:drop-shadow(0 0 18px #fff7)
+}
+

@@ -1,0 +1,7 @@
+這份交付包用於 Vercel 展示，也包含完整可修改原始碼。
+請先閱讀「部署與修改指南.md」。
+解壓後，將包含 package.json、vercel.json、src 的內層資料夾作為專案根目錄。
+四款共用一個部署，可用 ?edition=a、b、c、d 切換。
+尚未部署至 Vercel，壓縮檔本身不是線上網址。
+本機預覽：npm ci，再執行 npm run dev。
+請修改 src 原始碼，不要只修改 dist 建置成品。
